@@ -1,5 +1,7 @@
 # last_login
 
+Python 2.7 script used to determine which users logged in thirty or more days ago.
+
 # Instructions
 
 1. Create a csv named 'file.csv'

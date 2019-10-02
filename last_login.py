@@ -1,22 +1,23 @@
 """ __doc__ """
 
 import csv
-import datetime
 from datetime import date, datetime
 
 RTN = lambda: "\n"
 
 TODAY = date.today()
 
-with open('file.csv', 'r') as in_csvfile: # replace 'file.csv' with file name
+NUMBER_OF_DAYS = input("This script finds users who haven't logged in in a \
+number of days. Please specify a number of days.\n")
+
+with open('gg_test_data.csv', 'r') as in_csvfile:
     READER = csv.DictReader(in_csvfile)
     for row in READER:
-        email = row['EMAIL']
+        email = row['E-MAIL']
         last_login = row['LAST_LOGIN']
-        format_str = '%Y-%m-%d' # the format
-        last_login_obj = datetime.strptime(last_login, format_str)
+        last_login_obj = datetime.strptime(last_login, '%Y-%m-%d')
         delta = date.today() - last_login_obj.date()
-        if delta.days > 29:
+        if delta.days > NUMBER_OF_DAYS:
             print RTN()
             print "account:", email
             print "days since last login:", delta.days

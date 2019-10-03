@@ -1,6 +1,6 @@
 # last_login
 
-Python 2.7 script used to determine which users logged in thirty or more days ago.
+Python 2.7 script used to determine which users logged in within a number of days specified by the user.
 
 # Instructions
 

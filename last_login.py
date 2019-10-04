@@ -8,7 +8,7 @@ RTN = lambda: "\n"
 TODAY = date.today()
 
 NUMBER_OF_DAYS = input("This script finds users who haven't logged in in a \
-number of days. Please specify a number of days.\n")
+number of days.\nPlease specify a number of days since last login.\n")
 
 USERS_LOGINS = {}
 
@@ -27,7 +27,7 @@ with open('gg_test_data.csv', 'r') as in_csvfile:
 
 # if the dictionary populated above has any values, print them
 # if not, alert user
-if(USERS_LOGINS):
+if USERS_LOGINS:
     print RTN()
     for k, v in USERS_LOGINS.items():
         print "user:", k

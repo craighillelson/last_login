@@ -13,7 +13,7 @@ number of days.\nPlease specify a number of days since last login.\n")
 USERS_LOGINS = {}
 
 # loop through the contents csv and populate a dictionary
-with open('gg_test_data.csv', 'r') as in_csvfile:
+with open('file.csv', 'r') as in_csvfile:
     READER = csv.DictReader(in_csvfile)
     for row in READER:
         email = row['E-MAIL']

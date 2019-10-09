@@ -16,7 +16,8 @@ with open('file.csv', 'r') as in_csvfile:
     for row in READER:
         email = row['Email Address [Required]']
         last_login = row['Last Sign In [READ ONLY]']
-        last_login_obj = datetime.datetime.strptime(last_login, '%m/%d/%y %H:%M')
+        last_login_obj = datetime.datetime.strptime(last_login, \
+        '%m/%d/%y %H:%M')
         delta = datetime.datetime.now() - last_login_obj
         if delta.days > NUMBER_OF_DAYS:
             USERS_LOGINS[email] = last_login_obj, delta

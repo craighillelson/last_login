@@ -19,7 +19,7 @@ with open('file.csv', 'r') as in_csvfile:
         last_login_obj = datetime.datetime.strptime(last_login, \
         '%m/%d/%y %H:%M')
         delta = datetime.datetime.now() - last_login_obj
-        if delta.days > NUMBER_OF_DAYS:
+        if delta.days > int(NUMBER_OF_DAYS):
             USERS_LOGINS[email] = last_login_obj, delta
         else:
             pass
@@ -27,11 +27,11 @@ with open('file.csv', 'r') as in_csvfile:
 # if the dictionary populated above has any values, print them
 # if not, alert user
 if USERS_LOGINS:
-    print RTN()
+    print(RTN())
     for k, v in USERS_LOGINS.items():
-        print "user:", k
-        print "last login:", v[0].date()
-        print "days since last login:", v[1].days
-        print RTN()
+        print("user:", k)
+        print("last login:", v[0].date())
+        print("days since last login:", v[1].days)
+        print(RTN())
 else:
-    print "Each user has logged in within the number of days you specified."
+    print("Each user has logged in within the number of days you specified.")

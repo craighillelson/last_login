@@ -1,6 +1,6 @@
 # last_login
 
-Python 3.7.3 script used to determine which G Suite users logged in within a number of days specified by the user.
+Python 3.8 script used to determine which G Suite users logged in within a number of days specified by the user.
 
 # Instructions
 

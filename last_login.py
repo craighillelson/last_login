@@ -16,8 +16,9 @@ def write_to_csv(name_of_file, dct):
 
 RTN = lambda: "\n"
 
-NUMBER_OF_DAYS = input("This script finds users who haven't logged in in a \
-number of days.\nPlease specify a number of days since last login.\n")
+NUMBER_OF_DAYS = input('This script finds users who haven\'t logged in in a '
+                       'number of days.\nPlease specify a number of days since '
+                       'last login.\n')
 
 USERS_LOGINS = {}
 
@@ -39,6 +40,7 @@ with open('file.csv', 'r') as in_csvfile:
 # if not, alert user
 if USERS_LOGINS:
     print(RTN())
+<<<<<<< Updated upstream
     for user, login in USERS_LOGINS.items():
         print(f"user: {user}")
         print(f"last login: {login[0].date()}")
@@ -49,3 +51,12 @@ else:
 
 write_to_csv('output_file.csv', USERS_LOGINS)
 print("'output_file.csv' exported successfully")
+=======
+    for k, v in USERS_LOGINS.items():
+        print('user:', k)
+        print('last login:', v[0].date())
+        print('days since last login:', v[1].days)
+        print(RTN())
+else:
+    print('Each user has logged in within the number of days you specified.')
+>>>>>>> Stashed changes

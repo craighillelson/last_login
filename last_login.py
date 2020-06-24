@@ -1,4 +1,7 @@
-""" __doc__ """
+"""
+Using an 'OktaPasswordHealth.csv,' caclulate the number of days since each 
+user's last login. Write the results to a csv.
+"""
 
 import csv
 import re
